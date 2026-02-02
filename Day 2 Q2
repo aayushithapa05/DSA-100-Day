@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int n,min,max,index1,index2;
+    printf("Enter the number of days..");
+    scanf("%d",&n);
+    int prices[n];
+    for(int i=0;i<n;i++)
+    {
+        printf("Enter the stock rate at day.. %d",i+1);
+        scanf("%d",&prices[i]);
+    }
+    min=prices[0];
+    for(int i=0;i<n;i++)
+    {
+        if(min>prices[i])
+        {
+            min=prices[i];
+            index1=i;
+        }
+    }
+    max=prices[index1];
+    for(int i=index1;i<n;i++)
+    {
+        if(max<prices[i])
+        {
+            max=prices[i];
+            index2=i;
+        }
+    }
+    printf("Buy on %d day\n",index1+1);
+    printf("sell on %d day",index2+1);
+    
+    return 0;
+}
