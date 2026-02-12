@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() 
+{
+    int n,temp;
+    printf("Enter the numbers of elements..");
+    scanf("%d",&n);
+    int array[n];
+    printf("Enter the Elements..");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    for(int i=0;i<n/2;i++)
+    {
+        temp=array[(n-1)-i];
+        array[(n-1)-i]=array[i];
+        array[i]=temp;
+    }
+    for (int i=0;i<n;i++)
+    {
+        printf("%d\t",array[i]);
+    }
+    
+    return 0;
+    
+}
