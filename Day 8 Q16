@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int isPowerOfTwo(int number) {
+    if(number <= 0)
+        return 0;
+    if(number == 1)
+        return 1;
+    if(number % 2 != 0)
+        return 0;
+    return isPowerOfTwo(number / 2);
+}
+
+int main() {
+    int number;
+
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    if(isPowerOfTwo(number))
+        printf("True - It is a power of two");
+    else
+        printf("False - It is not a power of two");
+
+    return 0;
+}
