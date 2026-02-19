@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char text[]) {
+    int start = 0;
+    int end = strlen(text) - 1;
+    char temp;
+
+    while(start < end) {
+        temp = text[start];
+        text[start] = text[end];
+        text[end] = temp;
+
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    char text[100];
+
+    printf("Enter a string: ");
+    scanf("%s", text);
+
+    reverseString(text);
+
+    printf("Reversed string: %s", text);
+
+    return 0;
+}
