@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char codeName[100];
+    int length, i;
+
+    printf("Enter the code name: ");
+    scanf("%s", codeName);
+
+    length = strlen(codeName);
+
+    printf("Mirror format code name: ");
+
+    for(i = length - 1; i >= 0; i--) {
+        printf("%c", codeName[i]);
+    }
+
+    return 0;
+}
